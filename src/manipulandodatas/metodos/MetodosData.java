@@ -55,9 +55,9 @@ public class MetodosData {
         Date hoje = new Date();
         Date antes = new Date(2016 - 1900, 11, 12);
         Date antesAux = new Date(2016 - 1900, 11, 12, 22, 30);
-        System.out.println("iguais>>> " + date.equals(antes));
-        System.out.println("iguais>>> " + date.equals(hoje));
-        System.out.println("iguais>>> " + antes.equals(antesAux));
+        System.out.println("iguais antes>>> " + date.equals(antes));
+        System.out.println("iguais hoje>>> " + date.equals(hoje));
+        System.out.println("iguais antes com antes HH>>> " + antes.equals(antesAux));
     }
 
     public void dateToInstant() {

@@ -6,10 +6,8 @@
 package manipulandodatas;
 
 import java.text.ParseException;
-import manipulandodatas.construtores.ConstrutoresCalendar;
 import manipulandodatas.construtores.ConstrutoresData;
 import manipulandodatas.metodos.MetodosCalendar;
-import manipulandodatas.metodos.MetodosData;
 
 /**
  *
@@ -121,6 +119,16 @@ public class ManipulandoDatas {
         mc.clonar();
         System.out.println("---------------------------------------------------");
         mc.compararPara();
+        System.out.println("---------------------------------------------------");
+        mc.completar();
+        System.out.println("--------------------------?------------------------");
+        mc.computarCampos();
+        System.out.println("--------------------------?------------------------");
+        mc.computarTempo();
+        System.out.println("---------------------------------------------------");
+        mc.iguais();
+        System.out.println("---------------------------------------------------");
+        mc.pegar();
     }
 
 }
