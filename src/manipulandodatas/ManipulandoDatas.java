@@ -6,6 +6,7 @@
 package manipulandodatas;
 
 import java.text.ParseException;
+import manipulandodatas.campos.CampoCalendar;
 import manipulandodatas.construtores.ConstrutoresData;
 import manipulandodatas.metodos.MetodosCalendar;
 
@@ -24,6 +25,7 @@ public class ManipulandoDatas {
         /**
          * ********Construtores*********
          */
+        /*
         ConstrutoresData cd = new ConstrutoresData();
         cd.construtorDate();
         cd.construtorDateDeprecated();
@@ -31,7 +33,7 @@ public class ManipulandoDatas {
         cd.construtorDateDeprecatedComHorarioESegundos();
         cd.construtorDateMilissegundos();
         cd.construtorDateDeprecatedComString();
-
+         */
         /**
          * ********Métodos*********
          */
@@ -104,6 +106,7 @@ public class ManipulandoDatas {
         /**
          * ********Métodos class Calendar*********
          */
+        /*
         MetodosCalendar mc = new MetodosCalendar();
         System.out.println("---------------------------------------------------");
         mc.adicionar();
@@ -185,6 +188,36 @@ public class ManipulandoDatas {
         mc.rolar();
         System.out.println("---------------------------------------------------");
         mc.rolar1();
+        System.out.println("---------------------------------------------------");
+        mc.configurar();
+        System.out.println("---------------------------------------------------");
+        mc.configuracaoTotalData();
+        System.out.println("--------------------Class Date---------------------");
+        mc.dataModificada();
+        System.out.println("---------------------------------------------------");
+        mc.instante();
+        System.out.println("---------------------------------------------------");
+        mc.paraString();*/
+        /**
+         * ********Campos class Calendar*********
+         */
+        CampoCalendar cc = new CampoCalendar();
+        System.out.println("-------------------ALL_STYLES----------------------");
+        cc.ALLSTYLES();
+        System.out.println("-------------------AM------------------------------");
+        cc.am();
+        System.out.println("-------------------AM_PM---------------------------");
+        cc.amPm();
+        System.out.println("---------------------------------------------------");
+        cc.voltaOMes();
+        //System.out.println("---------------------------------------------------");
+        //cc.saoCamposConfiguraveis();
+        System.out.println("---------------------------------------------------");
+        cc.capturarValoresDosCampos();
+        System.out.println("---------------------------------------------------");
+        cc.offSet();
+        System.out.println("---------------------------------------------------");
+        cc.contadorDeCampos();
     }
 
 }

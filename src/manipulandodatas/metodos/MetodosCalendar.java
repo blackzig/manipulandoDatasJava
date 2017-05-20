@@ -6,9 +6,10 @@
 package manipulandodatas.metodos;
 
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Calendar;
+import java.util.Date;
 import java.util.GregorianCalendar;
-import java.util.Iterator;
 import java.util.Locale;
 import java.util.Map;
 import java.util.Set;
@@ -48,6 +49,10 @@ public class MetodosCalendar extends GregorianCalendar {
         String data = sdf.format(hoje.getTime());
         System.out.println("data de hoje>>> " + data);
         return hoje;
+    }
+
+    public void dataModificada() {
+        md.setTempo();
     }
 
     public void adicionar() {
@@ -234,7 +239,7 @@ public class MetodosCalendar extends GregorianCalendar {
         //https://www.tutorialspoint.com/java/util/calendar_getdisplayname.htm
         Calendar hoje = dataDeHoje();
         System.out.println("hoje " + hoje.getTime());
-        System.out.println("mostrarNome>>> " + hoje.getDisplayName(DAY_OF_WEEK, 2, Locale.US));
+        System.out.println("mostrarNome>>> " + hoje.getDisplayName(DAY_OF_WEEK, ALL_STYLES, Locale.US));
         /*
         field -- the calendar field.
         style -- the style that will be applied to the string representations
@@ -253,6 +258,8 @@ public class MetodosCalendar extends GregorianCalendar {
 
     public void primeiroDiaDaSemana() {
         Calendar hoje = dataDeHoje();
+        System.out.println("primeiroDiaDaSemana>>> " + hoje.getFirstDayOfWeek());
+        hoje.setFirstDayOfWeek(2);
         System.out.println("primeiroDiaDaSemana>>> " + hoje.getFirstDayOfWeek());
     }
 
@@ -304,6 +311,8 @@ public class MetodosCalendar extends GregorianCalendar {
     public void oPrimeiroDiaDaPrimeiraSemana() {
         Calendar hoje = dataDeHoje();
         System.out.println("oPrimeiroDiaDaPrimeiraSemana>>> " + hoje.getMinimalDaysInFirstWeek());
+        hoje.setMinimalDaysInFirstWeek(2);
+        System.out.println("oPrimeiroDiaDaPrimeiraSemana>>> " + hoje.getMinimalDaysInFirstWeek());
     }
 
     public void capturaAData() {
@@ -314,12 +323,19 @@ public class MetodosCalendar extends GregorianCalendar {
     public void retornaOsMilissegundos() {
         Calendar hoje = dataDeHoje();
         System.out.println("retornaOsMilissegundos>>> " + hoje.getTimeInMillis());
+        hoje.setTimeInMillis(1494639436965L);
+        System.out.println("retornaOsMilissegundos>>> " + hoje.getTimeInMillis());
+        System.out.println("data agora>>> " + hoje.getTime());
     }
 
     public void retornaTimeZone() {
         Calendar hoje = dataDeHoje();
         System.out.println("retornaTimeZone>>> " + hoje.getTimeZone());
-        System.out.println("retornaTimeZone>>> " + hoje.getTimeZone().getDisplayName());
+        System.out.println("retornaTimeZone>>> " + hoje.getTimeZone().getDisplayName() + " data: " + hoje.getTime());
+        TimeZone tz = TimeZone.getTimeZone("GMT");
+        hoje.setTimeZone(tz);
+        System.out.println("retornaTimeZone modificado>>> " + hoje.getTimeZone());
+        System.out.println("retornaTimeZone modificado>>> " + hoje.getTimeZone().getDisplayName() + " data: " + hoje.getTime());
     }
 
     public void numerosDeSemanasNoAno() {
@@ -345,6 +361,8 @@ public class MetodosCalendar extends GregorianCalendar {
     public void leniente() {
         Calendar hoje = dataDeHoje();
         System.out.println("leniente>>> " + hoje.isLenient());
+        hoje.setLenient(false);
+        System.out.println("leniente>>> " + hoje.isLenient());
     }
 
     public void ehSet() {
@@ -356,7 +374,9 @@ public class MetodosCalendar extends GregorianCalendar {
 
     public void estaSemanaESuportada() {
         Calendar hoje = dataDeHoje();
-        System.out.println("estaSemanaESuportada>>> " + hoje.isWeekDateSupported());
+        System.out.println("estaSemanaESuportada>>> " + hoje.isWeekDateSupported() + " data " + hoje.getTime());
+        hoje.setWeekDate(2017, 49, 4);
+        System.out.println("estaSemanaESuportada>>> " + hoje.isWeekDateSupported() + " data " + hoje.getTime());
     }
 
     public void rolar() {
@@ -377,4 +397,33 @@ public class MetodosCalendar extends GregorianCalendar {
         System.out.println("Para trás>>> " + hoje1.getTime());
     }
 
+    public void configurar() {
+        Calendar hoje = dataDeHoje();
+        hoje.set(Calendar.MONTH, 11);
+        System.out.println("configurar>>> " + hoje.getTime());
+    }
+
+    public void configuracaoTotalData() {
+        Calendar hoje = dataDeHoje();
+        hoje.set(1978, 11, 6);
+        System.out.println("mudar data>>> " + hoje.getTime());
+        hoje.set(1978, 11, 6, 22, 0);
+        System.out.println("mudar horário>>> " + hoje.getTime());
+        hoje.set(1978, 11, 6, 22, 0, 30);
+        System.out.println("mudar horário e segundos>>> " + hoje.getTime());
+    }
+
+    public void instante() {
+        Calendar hoje = dataDeHoje();
+        Instant inst = hoje.toInstant();
+        System.out.println("inst>>> " + inst + " objeto da classe: " + inst.getClass().getName());
+        Date newDate = Date.from(inst);
+        System.out.println("newDate>>> " + newDate);
+    }
+    
+    public void paraString(){
+        Calendar hoje = dataDeHoje();
+        System.out.println("paraString>>> " + hoje.toString());        
+        System.out.println("paraString>>> " + hoje.toString().getClass());
+    }
 }
