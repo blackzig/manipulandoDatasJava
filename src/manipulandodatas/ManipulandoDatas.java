@@ -6,6 +6,8 @@
 package manipulandodatas;
 
 import java.text.ParseException;
+import manipulandodatas.Exemplo.Ex1;
+import manipulandodatas.Exemplo.Ex2;
 import manipulandodatas.campos.CampoCalendar;
 import manipulandodatas.construtores.ConstrutoresData;
 import manipulandodatas.metodos.MetodosCalendar;
@@ -22,6 +24,25 @@ public class ManipulandoDatas {
      */
     public static void main(String[] args) throws ParseException {
 
+        Ex2 e2 = new Ex2();
+        e2.capturaHoje();
+
+        /*
+        Ex1 e1 = new Ex1();
+        e1.dataAgoraComAClasseDate();
+        System.out.println("---------------------------------------------------");
+        e1.dataAgoraComAClasseCalendar();
+        System.out.println("---------------------------------------------------");
+        e1.modificarData();
+        System.out.println("---------------------------------------------------");
+        e1.formatacaoData();
+        System.out.println("---------------------------------------------------");
+        e1.formatacaoDataBrasil();
+        System.out.println("---------------------------------------------------");
+        e1.converterDatas();
+        System.out.println("---------------------------------------------------");
+        e1.dataConformeOLocal();        
+         */
         /**
          * ********Construtores*********
          */
@@ -201,11 +222,14 @@ public class ManipulandoDatas {
         /**
          * ********Campos class Calendar*********
          */
+        /*
         CampoCalendar cc = new CampoCalendar();
         System.out.println("-------------------ALL_STYLES----------------------");
         cc.ALLSTYLES();
         System.out.println("-------------------AM------------------------------");
         cc.am();
+        System.out.println("-------------------PM------------------------------");
+        cc.pm();
         System.out.println("-------------------AM_PM---------------------------");
         cc.amPm();
         System.out.println("---------------------------------------------------");
@@ -218,6 +242,7 @@ public class ManipulandoDatas {
         cc.offSet();
         System.out.println("---------------------------------------------------");
         cc.contadorDeCampos();
+         */
     }
 
 }
