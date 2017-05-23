@@ -26,7 +26,37 @@ public class ManipulandoDatas {
 
         Ex2 e2 = new Ex2();
         e2.capturaHoje();
-
+        System.out.println("---------------------------------------------------");
+        e2.fusoHorarios();
+        System.out.println("---------------------------------------------------");
+        e2.incrementoData();
+        System.out.println("---------------------------------------------------");
+        e2.capturarAno();
+        System.out.println("---------------------------------------------------");
+        e2.alterarData();
+        System.out.println("---------------------------------------------------");
+        e2.metodoOf();
+        System.out.println("---------------------------------------------------");
+        e2.compararDatas();
+        System.out.println("---------------------------------------------------");
+        e2.compararDatasDeTimeZonesDiferentes();
+        System.out.println("---------------------------------------------------");
+        e2.anoMes();
+        System.out.println("---------------------------------------------------");
+        e2.diasDoAnoEMes();
+        System.out.println("---------------------------------------------------");
+        e2.metodosAt();
+        System.out.println("---------------------------------------------------");
+        e2.criandoData();
+        System.out.println("---------------------------------------------------");
+        e2.comparandoDiasDaSemana();
+        System.out.println("---------------------------------------------------");
+        e2.formatandoData();
+        System.out.println("---------------------------------------------------");
+        e2.compararDatasChrono();
+        System.out.println("---------------------------------------------------");
+        e2.dataPeriodo();
+                
         /*
         Ex1 e1 = new Ex1();
         e1.dataAgoraComAClasseDate();
