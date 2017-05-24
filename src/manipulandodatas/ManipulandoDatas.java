@@ -8,6 +8,7 @@ package manipulandodatas;
 import java.text.ParseException;
 import manipulandodatas.Exemplo.Ex1;
 import manipulandodatas.Exemplo.Ex2;
+import manipulandodatas.apresentacao.Principal;
 import manipulandodatas.campos.CampoCalendar;
 import manipulandodatas.construtores.ConstrutoresData;
 import manipulandodatas.metodos.MetodosCalendar;
@@ -24,6 +25,21 @@ public class ManipulandoDatas {
      */
     public static void main(String[] args) throws ParseException {
 
+        Principal p = new Principal();
+        System.out.println("*******************dataAgora()********************");
+        p.dataAgora();
+        System.out.println("**********configuraDataComMilissegundos()*********");
+        p.configuraDataComMilissegundos();
+        System.out.println("******************fusoHorarios()******************");
+        p.fusoHorarios();
+        System.out.println("*****************incrementoData()*****************");
+        p.incrementoData();
+        System.out.println("*****************alterarAno()*********************");
+        p.alterarAno();
+        System.out.println("****************alterarData()*********************");
+        p.alterarData();
+        
+        /*
         Ex2 e2 = new Ex2();
         e2.capturaHoje();
         System.out.println("---------------------------------------------------");
@@ -56,8 +72,8 @@ public class ManipulandoDatas {
         e2.compararDatasChrono();
         System.out.println("---------------------------------------------------");
         e2.dataPeriodo();
-                
-        /*
+         */
+ /*
         Ex1 e1 = new Ex1();
         e1.dataAgoraComAClasseDate();
         System.out.println("---------------------------------------------------");
