@@ -38,7 +38,10 @@ public class ManipulandoDatas {
         p.alterarAno();
         System.out.println("****************alterarData()*********************");
         p.alterarData();
-        
+        System.out.println("**************dataPreDefinida()*******************");
+        p.dataPreDefinida();
+        System.out.println("***************compararDatas()********************");
+        p.compararDatas();
         /*
         Ex2 e2 = new Ex2();
         e2.capturaHoje();
