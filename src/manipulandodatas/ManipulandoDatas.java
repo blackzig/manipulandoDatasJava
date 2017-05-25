@@ -42,6 +42,20 @@ public class ManipulandoDatas {
         p.dataPreDefinida();
         System.out.println("***************compararDatas()********************");
         p.compararDatas();
+        System.out.println("*****compararDatasDeTimeZonesDiferentes()*********");
+        p.compararDatasDeTimeZonesDiferentes();
+        System.out.println("********************anoMes()**********************");
+        p.anoMes();
+        System.out.println("*****************diasDoAnoEMes()******************");
+        p.diasDoAnoEMes();
+        System.out.println("*******************metodosAt()********************");
+        p.metodosAt();
+        System.out.println("******************criandoData()*******************");
+        p.criandoData();
+        System.out.println("*************comparandoDiasDaSemana()*************");
+        p.comparandoDiasDaSemana();
+        System.out.println("*****************formatandoData()*****************");
+        p.formatandoData();
         /*
         Ex2 e2 = new Ex2();
         e2.capturaHoje();
