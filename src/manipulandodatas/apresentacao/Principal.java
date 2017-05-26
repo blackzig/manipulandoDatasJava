@@ -5,14 +5,15 @@
  */
 package manipulandodatas.apresentacao;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.time.Clock;
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.time.MonthDay;
+import java.time.Period;
 import java.time.Year;
 import java.time.YearMonth;
 import java.time.ZoneId;
@@ -20,6 +21,7 @@ import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.time.format.TextStyle;
+import java.time.temporal.ChronoUnit;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
@@ -431,7 +433,7 @@ public class Principal {
         LocalDateTime dataHora = LocalDateTime.now();
         System.out.println(dataHora);
         System.out.println(dataHora.format(DateTimeFormatter.ofPattern("dd/MM/yyyy hh:MM:ss")));
-        
+
         System.out.println(dataHora.format(DateTimeFormatter.
                 ofLocalizedDate(FormatStyle.FULL)));
         System.out.println(dataHora.format(DateTimeFormatter.
@@ -440,5 +442,30 @@ public class Principal {
                 ofLocalizedDate(FormatStyle.MEDIUM)));
         System.out.println(dataHora.format(DateTimeFormatter.
                 ofLocalizedDate(FormatStyle.SHORT)));
+    }
+
+    public void compararDatasChrono() {
+        LocalDate tiradentes = LocalDate.of(2014, 4, 21);
+        LocalDate procReplublica = LocalDate.of(2014, 11, 15);
+        long dias = ChronoUnit.DAYS.between(tiradentes, procReplublica);
+        System.out.printf("São %s dias de diferença.", dias);
+        long meses = ChronoUnit.MONTHS.between(tiradentes, procReplublica);
+        System.out.printf("\nSão %s meses de diferença.", meses);
+        System.out.println("");
+    }
+
+    public void dataPeriodo() {
+        LocalDate brasileiro = LocalDate.of(2009, 12, 6);
+        LocalDate copaDoBrasil = LocalDate.of(2013, 11, 27);
+        Period dif = Period.between(brasileiro, copaDoBrasil);
+        System.out.printf("%s anos, %s meses e %s dias", dif.getYears(), dif.getMonths(),
+                dif.getDays());
+        System.out.println("");
+        System.out.println("---------------------------------------------------");
+        LocalDateTime inicio = LocalDateTime.of(2013, 10, 20, 0, 0, 0);
+        LocalDateTime fim = LocalDateTime.of(2014, 2, 16, 0, 0, 0);
+        Duration dur = Duration.between(inicio, fim);
+        System.out.printf("%s dias %s horas, %s minutos e %s segundos", dur.toDays(), dur.toHours(), dur.toMinutes(), dur.getSeconds());
+        System.out.println("");
     }
 }
