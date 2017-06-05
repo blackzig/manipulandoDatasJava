@@ -9,6 +9,8 @@ import java.text.ParseException;
 import manipulandodatas.Exemplo.Ex1;
 import manipulandodatas.Exemplo.Ex2;
 import manipulandodatas.Exemplo.Ex3;
+import manipulandodatas.JavaTime.Duracao;
+import manipulandodatas.JavaTime.Relogio;
 import manipulandodatas.apresentacao.Principal;
 import manipulandodatas.campos.CampoCalendar;
 import manipulandodatas.construtores.ConstrutoresData;
@@ -25,11 +27,14 @@ public class ManipulandoDatas {
      * @param args the command line arguments
      * @throws java.text.ParseException
      */
-    public static void main(String[] args) throws ParseException{
-        
-        Inicio i = new Inicio();
-        i.setVisible(true);
-        /*
+    public static void main(String[] args) throws ParseException {
+
+        /*Mostrar exemplos visual*/
+        // Inicio i = new Inicio();
+        //i.setVisible(true);
+
+        /*Class comparações Date, Calendar e Java.time*/
+ /*
         Principal p = new Principal();
         System.out.println("*******************dataAgora()********************");
         p.dataAgora();
@@ -66,7 +71,66 @@ public class ManipulandoDatas {
         System.out.println("******************dataPeriodo()*******************");
         p.dataPeriodo();
          */
-
+ /*JAVA TIME*/
+        Duracao d = new Duracao();
+        d.abs1();
+        System.out.println("**************************************************");
+        d.adicionarTempo();
+        System.out.println("**************************************************");
+        d.entre();
+        System.out.println("**************************************************");
+        d.comparar();
+        System.out.println("**************************************************");
+        d.divididoPor();
+        System.out.println("**************************************************");
+        d.igual();
+        System.out.println("**************************************************");
+        d.origem();
+        System.out.println("**************************************************");
+        d.capturar();
+        System.out.println("**************************************************");
+        d.capturarNano();
+        System.out.println("**************************************************");
+        d.capturarSegundo();
+        System.out.println("**************************************************");
+        d.capturarUnidade();
+        System.out.println("**************************************************");
+        d.codigoHash();
+        System.out.println("**************************************************");
+        d.ehNegativo();
+        System.out.println("**************************************************");
+        d.ehZero();
+        /*Relogio*/
+ /*
+        Relogio r = new Relogio();
+        r.ehIgual();
+        System.out.println("**************************************************");
+        r.fixado();
+        System.out.println("**************************************************");
+        r.captureAZone();
+        System.out.println("**************************************************");
+        r.codigoHash();
+        System.out.println("**************************************************");
+        r.instante();
+        System.out.println("**************************************************");
+        r.millissegundos();
+        System.out.println("**************************************************");
+        r.offConfiguracao();
+        System.out.println("**************************************************");
+        r.sistema();
+        System.out.println("**************************************************");
+        r.sistemaPadrao();
+        System.out.println("**************************************************");
+        r.sistemaUTC();
+        System.out.println("**************************************************");
+        r.tiqueTaque();
+        System.out.println("**************************************************");
+        r.tiqueTaqueMinutos();
+        System.out.println("**************************************************");
+        r.tiqueTaqueSegundos();
+        System.out.println("**************************************************");
+        r.comZona();
+         */
  /*
         Ex3 e3 = new Ex3();
         e3.Elly();
@@ -123,7 +187,7 @@ public class ManipulandoDatas {
         e1.dataConformeOLocal();        
          */
         /**
-         * ********Construtores*********
+         * ********Construtores class Date*********
          */
         /*
         ConstrutoresData cd = new ConstrutoresData();
@@ -135,7 +199,7 @@ public class ManipulandoDatas {
         cd.construtorDateDeprecatedComString();
          */
         /**
-         * ********Métodos*********
+         * ********Métodos class Date*********
          */
         /* MetodosData md = new MetodosData();
         md.depois();
